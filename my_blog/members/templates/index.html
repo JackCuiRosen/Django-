@@ -1,0 +1,252 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width initial-scale=1.0"/>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+		<link  rel="icon" type="text/css" href="{% static 'img/wool3.png' %}"/>
+		<title>知识星球</title>
+	</head>
+	<body>
+	<!-- <====================================================================================>导航栏 -->
+	<header>
+		<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top" data-bs-theme="dark">
+		  <div class="container-fluid">
+		     <div class="col-md-2">
+				<a href="#" class="d-inline-flex link-body-emphasis text-decoration-none">
+					<img src="{% static 'img/wool1.png' %}" style="width: 3rem; height: 3rem;"/>
+					<span class="fs-5 navbar-text">TecShare</span>
+				</a>
+			</div>
+		    <div class="d-flex gap-3">
+				<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarSearchContent" aria-controls="navbarSearchContent" aria-expanded="false" aria-label="Toggle searchContent">
+				<span class="DocSearch-Button-Container">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+					  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+					</svg>
+				</span>
+			</button>
+			<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		      <span class="navbar-toggler-icon"></span>
+			</button>
+			</div>
+			
+			
+		    <div class="offcanvas offcanvas-end text-bg-dark " tabindex="-1" id="navbarSupportedContent">
+				<div class="offcanvas-header">
+				   <button class="btn btn-sm btn-outline-primary">Login</button>
+				  	<button class="btn btn-sm btn-warning">Sign up</button>
+						
+				</div>
+				<div class="offcanvas-body">
+				  <ul class="navbar-nav nav-pills justify-content-between flex-grow-1 pe-3">
+					  <hr />
+					  <li class="nav-item">
+						  <a class="nav-link active" href="#" aria-current="page">主页</a>
+					  </li>
+					  <li class="nav-item">
+						  <a class="nav-link" href="share.html">
+							  产品
+						  </a>
+					  </li>
+					  <li class="nav-item">
+						  <a class="nav-link">
+							  技术分享
+						  </a>
+					  </li>
+					  <li class="nav-item dropdown">
+						  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aira-expanded="false">
+							  关于TecShare
+						  </a>
+						  <ul class="dropdown-menu">
+							  <li><a class="dropdown-item">产品介绍</a></li>
+							  <li><a class="dropdown-item">公司介绍</a></li>
+							  <hr/>
+							  <li><a class="dropdown-item">联系站长</a></li>
+						  </ul>
+					  </li>
+		
+				  </ul>
+				  
+			  </div>
+			</div>
+			 <div class="offcanvas offcanvas-end " tabindex="-1" id="navbarSearchContent">
+				 <div class="offcanvas-header">
+					 
+					 
+				 </div>
+				 <div class="offcanvas-body">
+					 <hr />
+					 <form class="d-flex  offset-2" role="search">
+					 	<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+					 	<button class="btn btn-sm btn-outline-success" type="submit">
+						<span class="DocSearch-Button-Container">
+							<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+							  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+							</svg>
+						</span>
+						</button>
+					 </form>
+				 </div>
+			</div>
+		     <div class="dropstart col-md-1">
+				 <a href="#" class="d-flex align-items-center link-body-emphasis text-decoration-none dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+					<span class="DocSearch-Button-Container">
+					 	<strong>Jack</strong>
+						<img src="{% static 'img/Customer.png' %}" alt width="32" height="32" class="rounded-circle me-2"/>
+						
+					 </span>
+				 </a>
+				 <ul class="dropdown-menu dropdown-menu-dark">
+					 <li >
+						 <a class="dropdown-item"><strong>我的分享</strong></a>
+					 </li>
+					 <li >
+						 <a class="dropdown-item"><strong>动态</strong></a>
+					 </li>
+					 <li>
+						 <a class="dropdown-item">
+							 <strong>设置</strong>
+							
+						 </a>
+					 </li>
+					 <hr />
+					 <li>
+						 <a class="dropdown-item">
+							 <strong>登出</strong>
+						 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+							  <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
+							  <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+							</svg></a>
+					 </li>
+				 </ul>
+			 </div>
+				
+		  </div>
+		</nav>
+	</header>
+		<!-- <===================================================================================================> -->
+
+		<div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+			<div class="carousel-indicators">
+				<button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+				    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
+				    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
+			</div>
+		  <div class="carousel-inner bg-dark">
+		    <div class="carousel-item active">
+				<img src="img/open network.jpg" class="d-block mx-auto" style="width: 100%; height: 36rem;" alt="..."/>
+				<div class="container text-light">
+					<div class="carousel-caption text-center">
+						<h1 class="">分享</h1>
+						<p class="h3">
+							在这里你可以获取到你所需要的
+							任何学习资料,我们坚信开放才是我们社区应该坚守的!
+							在这里你可以找到许多技术的解析,同时你也可以将你对技术的理解分享在我们社区,!
+						</p>
+						<p class="h2">
+							<a class="btn btn-lg btn-primary" href="#">了解社区</a>
+						</p>
+					</div>
+					
+				</div>
+		    </div>
+		    <div class="carousel-item">
+				<img src="img/cm1.jpg" class="d-block mx-auto" style="width: 100%; height: 36rem;" alt="..."/>
+		      <div class="carousel-caption text-center">
+		      	<h1>交流</h1>
+		      	<p class="h3">
+		      		我们社区有成千上万的互联网从业者,他们对互联网有着深刻的理解,交流是打破信息壁垒的最好方式,这是一个互相促进的过程,
+					而这里我们进行交流的一个好地方!
+		      	</p>
+		      	<p class="h2">
+		      		<a class="btn btn-lg btn-primary" href="#">与同行交流</a>
+		      	</p>
+		      </div>
+		    </div>
+		    <div class="carousel-item">
+				
+				<img src="img/service.jpg" class="d-block mx-auto" style="width: 100%; height: 36rem;" alt="..."/>
+				<div class="carousel-caption">	
+					<h1>服务</h1>
+					<p class="h3">
+						如果你是初入行业的人员,你一定有着许多的困惑,也许是对如何在海量的学习资源中寻找优质的学习资源,
+						又或许是对行业就业没有清晰的方向!在我们这里,这些都不是问题,因为我们社区有着经验丰富的互联网精英指引你,
+					</p>
+					<p class="h2">
+						<a class="btn btn-lg btn-primary" href="#">查看服务</a>
+					</p>
+					
+				</div>
+		    </div>
+		  </div>
+		  <button class="carousel-control-prev bg-dark my-auto rounded-circle" style="width: 6%; height: 30%;" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+		    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		    <span class="visually-hidden">Previous</span>
+		  </button>
+		  <button class="carousel-control-next bg-dark my-auto rounded-circle" style="width: 6%; height: 30%;" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+		    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+		    <span class="visually-hidden">Next</span>
+		  </button>
+		</div>
+		<div class="container marketing">
+			<div class="row">
+				<div class="col-lg-4 text-center">
+				        <img src="img/Sec.jpg" width="140" height="140" class="rounded-circle me-2"/>
+				        <h2 class="fw-normal">安全资讯</h2>
+				        <p >
+							我们将在第一时间分享报送的安全威胁,这里是为想要从事网络安全行业的小伙伴提供的一个简易的渗透测试靶场.
+							我们还将在这里不定期举行夺旗赛.与其他网络安全工程师交流和分享心得!
+						</p>
+				        <p><a class="btn btn-secondary" href="#">View details »</a></p>
+				 </div>
+				<div class="col-lg-4 text-center">
+						<img src="img/Tec.jpg" width="140" height="140" class="rounded-circle"/>
+				        <h2 class="fw-normal">网站建设</h2>
+				        <p>我们提供免费的网站建设教程,包括CSS,HTML和Vue框架的学习.行业大牛教你如何设计一个优秀的网站!让你也能收获年薪百万的offer!
+						快来学习吧!</p>
+						<br />
+				        <p class="text-bottom"><a class="btn btn-secondary" href="#">View details »</a></p>
+				</div>
+				<div class="col-lg-4 text-center">
+						 <img src="img/Co1.jpg" width="140" height="140" class="rounded-circle me-2"/>
+				        <h2 class="fw-normal">协同开发</h2>
+				        <p>我们将邀请有意愿加入我们的工程师同我们一同开发一些项目用于学习和交流,
+						同时我们也有社区的公益项目,旨在促进互联网的开源事业的发展!
+						</p>
+						<br />
+						<p><a class="btn btn-secondary" href="#">View details »</a></p>
+				</div>
+			</div>
+		</div>
+			
+		 <div class="container">
+		   <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+		     <div class="col-md-4 d-flex align-items-center">
+		       <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+		         <img src="{% static 'img/wool1.png' %}" style="width: 3rem; height: 3rem;"/>
+		       </a>
+		       <span class="mb-3 mb-md-0 text-body-secondary">© 2023 TexShare, Inc</span>
+		     </div>
+		 
+		     <ul class="nav col-md-3 justify-content-end list-unstyled d-flex">
+		       <li class="ms-3"><a class="text-body-secondary" href="#"><img src="{% static 'img/weChat.jpg' %}" style="width: 3rem; height: 3rem;"/></a></li>
+		       <li class="ms-3"><a class="text-body-secondary" href="#"><img src="{%static 'img/qq.png' %}" style="width: 3rem; height: 3rem;"/><a></li>
+		       <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+		     </ul>
+		   </footer>
+		 </div>
+	<style>
+		.carousel-item
+		{
+			height: 36rem;
+			position: relative;
+			float: left;
+			width: 100%;
+		}
+	</style>
+	</body>
+</html>
+<!-- me-auto  mb-2 mb-lg-0 -->
